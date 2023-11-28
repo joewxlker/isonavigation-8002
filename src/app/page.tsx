@@ -1,6 +1,5 @@
 import { randomUUID } from "crypto";
 import { Button, ButtonTwo } from "./components/button";
-import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Section } from "./components/section";
 

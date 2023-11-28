@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FC, useCallback } from "react";
+import { type FC } from "react";
 import { useCopyToClipboard } from "../hooks/copyToClipboard";
 
 export const Contract: FC<{ contractAddress: string }> = ({

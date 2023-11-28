@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card } from "../components/card";
 import { Section } from "../components/section";
 import { useCopyToClipboard } from "../hooks/copyToClipboard";
-import { ProjectInfo } from "../models/project.model";
+import { type ProjectInfo } from "../models/project.model";
 import Image from "next/image";
 
 export const Tokenomics = ({ config }: { config: ProjectInfo }) => {
@@ -27,7 +27,7 @@ export const Tokenomics = ({ config }: { config: ProjectInfo }) => {
                     { key: 'Total Supply', value: '100M' },
                     { key: 'Contract Address', value: '0x18a...5667', button: true },
                     { key: 'Circulating Tokens', value: '100%' }
-                ].map(props => <li className="font-body text-lg text-t2 text-center w-full">
+                ].map(props => <li key={props.key} className="font-body text-lg text-t2 text-center w-full">
                     <p className="text-left text-t3 font-accent">
                         {props.key}
                     </p>

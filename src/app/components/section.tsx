@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { type FC, type ReactNode } from "react";
-import { Button, ButtonThree } from "./button";
+import { ButtonThree } from "./button";
 
 const Container: FC<{ id: string; children: ReactNode }> = ({
   id,
@@ -44,7 +43,7 @@ const Article: FC<{
       <h2 className="text-4xl text-t1 font-accent">{title?.toUpperCase()}</h2>
       <p className="font-body text-lg text-t2">{body}</p>
       {buttons && <div className="flex flex-row w-full">
-        {buttons.map(button => (<ButtonThree {...button} />))}
+        {buttons.map((button, idx) => (<ButtonThree key={`${button.text}${idx}`} {...button} />))}
       </div>}
     </article>
   );
