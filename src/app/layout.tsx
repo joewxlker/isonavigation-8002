@@ -1,23 +1,29 @@
 import "~/styles/globals.css";
 
-import { Amatic_SC } from "next/font/google";
+import { Noto_Sans, Nova_Flat } from "next/font/google";
 import { type Metadata } from "next";
 
 import config from "public/config.json";
 
 export const metadata: Metadata = config.meta;
 
-const heading = Amatic_SC({
+const heading = Noto_Sans({
   subsets: ["latin"],
-  weight: "700",
+  weight: "400",
   variable: "--font-heading",
 });
 
-const body = Amatic_SC({
+const body = Nova_Flat({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-body",
 });
+
+const accent = Noto_Sans({
+  subsets: ["latin"],
+  weight: "600",
+  variable: "--font-accent",
+})
 
 export default function RootLayout({
   children,
@@ -26,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} bg-s1`}>
+      <body className={`${heading.variable} ${accent.variable} ${body.variable} bg-s2`}>
         {children}
       </body>
     </html>

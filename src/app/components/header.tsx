@@ -25,18 +25,19 @@ export const Header: FC<{ layout: string; config: ProjectInfo }> = ({
   );
   return (
     <div
-      className={`${layout} fixed left-0 right-0 top-0 flex flex-row bg-p1 py-2 shadow-sm shadow-shadow`}
+      className={`${layout} fixed left-0 right-0 top-0 flex flex-row z-50 py-2 shadow-sm shadow-shadow bg-p1 bg-opacity-30 backdrop-blur-md`}
     >
       <div className="flex flex-1 flex-col justify-center">
-        <Link href="/">
+        <Link className="flex flex-row gap-5 justify-start items-center" href="/">
           <Image src="" alt="" height={40} width={40} />
+          <p className="text-2xl font-body text-t1">ISONAVIGATION</p>
         </Link>
       </div>
       <div className="flex-1" />
       <div className="hidden flex-1 flex-row items-center justify-evenly gap-5 md:flex lg:flex xl:flex">
         {sections?.map((section) => (
           <Link key={section.title} href={section.href}>
-            <h3 className="font-body text-2xl text-t1">{section.title}</h3>
+            <h3 className="font-body text-lg text-t2">{section.title.toUpperCase()}</h3>
           </Link>
         ))}
         <Button href={config.dextools} text="CHART" />
