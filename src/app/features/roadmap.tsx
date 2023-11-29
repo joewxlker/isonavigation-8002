@@ -33,7 +33,7 @@ export const Roadmap: FC<{ config: ProjectInfo }> = ({ config }) => {
 
 const RoadmapItem: FC<{ title: string, subHeading: string, children: { key: string; value: RoadmapItemStatus; }[]}> = ({ title, subHeading, children }) => {
     return (
-        <div className="hover:scale-105 transition-scale duration-300 hover:shadow-[rgba(255,255,255,0.2)] hover:shadow-lg overflow-clip relative flex max-w-[100vw] flex-col items-center justify-start border-s3 border-[1px] rounded bg-[#101010] bg-opacity-30 backdrop-blur-md text-t1 shadow-sm shadow-shadow w-full">
+        <div className="hover:scale-105 transition-scale duration-300 hover:shadow-[rgba(255,255,255,0.2)] hover:shadow-lg overflow-clip relative flex max-w-[100vw] flex-col items-center justify-start border-s3 border-[1px] rounded bg-[#101010] bg-opacity-30 text-t1 shadow-sm shadow-shadow w-full">
             <span className="text-left w-full p-2 border-b-[1px] border-b-s3 bg-s3 bg-opacity-30">
                 <h4 className="font-heading text-md text-t3">{title}</h4>
                 <h5 className="font-accent text-2xl text-t1">{subHeading}</h5>

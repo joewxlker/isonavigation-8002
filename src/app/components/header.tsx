@@ -25,7 +25,7 @@ export const Header: FC<{ layout: string; config: ProjectInfo }> = ({
   );
   return (
     <div
-      className={`${layout} fixed left-0 right-0 top-0 flex flex-row z-50 py-2 shadow-sm shadow-shadow bg-p1 bg-opacity-30 backdrop-blur-md`}
+      className={`${layout} fixed left-0 right-0 top-0 flex flex-row z-50 py-2 shadow-sm shadow-shadow bg-p1 bg-opacity-30`}
     >
       <div className="flex flex-1 flex-col justify-center">
         <Link className="flex flex-row gap-5 justify-start items-center" href="/">
@@ -53,7 +53,7 @@ export const Header: FC<{ layout: string; config: ProjectInfo }> = ({
         </button>
       </div>
       <div
-        className={`fixed left-0 top-0 h-screen w-screen backdrop-blur-sm transition-opacity duration-300 md:hidden lg:hidden xl:hidden ${
+        className={`fixed left-0 top-0 h-screen w-screen transition-opacity duration-300 md:hidden lg:hidden xl:hidden ${
           menu ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
