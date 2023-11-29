@@ -41,7 +41,7 @@ export const Tokenomics = ({ config }: { config: ProjectInfo }) => {
                         <Card.Header heading={child.title} icon="/icons/gg.svg" />
                         <div className="w-full flex-1 flex-col flex gap-5 px-3 py-2">
                             {child.children.map(child => (
-                                <span className="flex flex-row justify-between items-center">
+                                <span key={child.key} className="flex flex-row justify-between items-center">
                                     <p className="text-xl text-left font-body text-t3">{child.key}</p>
                                     {(child as { value: string | undefined})?.value && <p className="text-xl text-left font-body text-t1">{(child as { value: string | undefined})?.value}</p>}
                                     {(child as { href: string | undefined})?.href && 
