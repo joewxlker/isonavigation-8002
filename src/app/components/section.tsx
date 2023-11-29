@@ -26,7 +26,7 @@ const Header: FC<{ title: string, image: string }> = ({ title, image }) => {
 
 const Body: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div className="relative flex overflow-clip flex-row flex-wrap items-center justify-center gap-5 lg:justify-evenly xl:justify-evenly border-s3 border-[1px] bg-p1 p-5 rounded-md">
+    <div className="relative flex overflow-clip flex-row xl:flex-nowrap lg:flex-nowrap flex-wrap items-center justify-center gap-5 lg:justify-evenly xl:justify-evenly border-s3 border-[1px] bg-p1 p-5 rounded-md">
       {children}
     </div>
   );

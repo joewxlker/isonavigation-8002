@@ -1,18 +1,18 @@
 import { type FC } from "react";
-import { Contract } from "./contract";
 import { Socials } from "./socials";
 import { type ProjectInfo } from "~/app/models/project.model";
 
-export const Footer: FC<{ layout: string; config: ProjectInfo }> = ({
-  layout,
+export const Footer: FC<{ config: ProjectInfo }> = ({
   config,
 }) => {
   return (
     <footer
-      className={`flex min-h-[20rem] w-full flex-col items-center justify-center gap-5 ${layout}`}
+    className={`flex min-h-[20rem] w-full flex-col justify-center gap-5`}
     >
-      <Contract contractAddress={config.contractAddress} />
-      <Socials config={config} />
+      <div className="flex flex-col xl:items-end lg:items-end items-center">
+        <Socials config={config} />
+        <p className="text-md font-body text-t3">© 2023 ISONAVIGATION. All rights reserved.</p>
+      </div>
     </footer>
   );
 };

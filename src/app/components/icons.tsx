@@ -6,7 +6,7 @@ export const dextools: FC<{ fill: string; config: ProjectInfo }> = ({
   fill,
   config,
 }) => (
-  <Link href={config.dextools} target="_blank">
+  <Link className="h-10 w-10 bg-s2 p-2 rounded opacity-50 border-white border-[1px] flex justify-center items-center" href={config.dextools} target="_blank">
     <svg
       fill="none"
       height="100%"
@@ -28,7 +28,7 @@ export const etherscan: FC<{ fill: string; config: ProjectInfo }> = ({
   fill,
   config,
 }) => (
-  <Link href={config.etherscan} target="_blank">
+  <Link className="h-10 w-10 bg-s2 p-2 rounded opacity-50 border-white border-[1px]  flex justify-center items-center" href={config.etherscan} target="_blank">
     <svg
       width="auto"
       height="100%"
@@ -52,7 +52,7 @@ export const telegram: FC<{ fill: string; config: ProjectInfo }> = ({
   fill,
   config,
 }) => (
-  <Link href={config.telegram} target="_blank">
+  <Link className="h-10 w-10 bg-s2 p-2 rounded opacity-50 border-white border-[1px]" href={config.telegram} target="_blank">
     <svg
       width="auto"
       height="100%"
@@ -73,7 +73,7 @@ export const uniswap: FC<{ fill: string; config: ProjectInfo }> = ({
   fill,
   config,
 }) => (
-  <Link href={config.uniswap} target="_blank">
+  <Link className="h-10 w-10 bg-s2 p-2 rounded opacity-50 border-white border-[1px]  flex justify-center items-center" href={config.uniswap} target="_blank">
     <svg
       width="auto"
       height="100%"
@@ -129,7 +129,7 @@ export const twitter: FC<{ fill: string; config: ProjectInfo }> = ({
   fill,
   config,
 }) => (
-  <Link href={config.twitter} target="_blank">
+  <Link className="h-10 w-10 bg-s2 p-2 rounded opacity-50 border-white border-[1px]  flex justify-center items-center" href={config.twitter} target="_blank">
     <svg
       width="auto"
       height="100%"

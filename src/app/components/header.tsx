@@ -36,19 +36,20 @@ export const Header: FC<{ layout: string; config: ProjectInfo }> = ({
       <div className="flex-1" />
       <div className="hidden flex-1 flex-row items-center justify-evenly gap-5 md:flex lg:flex xl:flex">
         {sections?.map((section) => (
-          <Link key={section.title} href={section.href}>
+          <Link className="group" key={section.title} href={section.href}>
             <h3 className="font-body text-lg text-t2">{section.title.toUpperCase()}</h3>
+            <div className={`h-[1px] bg-accent group-hover:w-full w-0 transition-all duration-300`}/>
           </Link>
         ))}
         <Button href={config.dextools} text="CHART" />
       </div>
       <div className="flex flex-1 flex-row items-center justify-end md:hidden lg:hidden xl:hidden">
         <button
-          className="flex h-10 w-10 items-center justify-center rounded bg-s1"
+          className="flex h-10 w-10 items-center justify-center rounded bg-s2"
           type="button"
           onClick={toggleMenu}
         >
-          <Image src="/icons/bars.svg" alt="" height={34} width={34} />
+          <Image src="/icons/bars.svg" alt="" height={20} width={20} />
         </button>
       </div>
       <div
@@ -57,31 +58,30 @@ export const Header: FC<{ layout: string; config: ProjectInfo }> = ({
         }`}
       >
         <div className="relative h-full w-full">
-          <div className="absolute bottom-0 left-0 right-0 top-20 bg-s1 text-t2">
-            <header className="flex w-full flex-row items-center justify-between p-5">
-              <p className="font-heading text-4xl">TEMPLATE</p>
+          <div className="absolute bottom-0 left-0 right-0 top-20 bg-s2 text-t2">
+            <header className="flex w-full flex-row items-center justify-between p-5 bg-s2 border-b-[1px] border-s3">
+              <p className="font-body text-2xl text-t2">{config.meta.title}</p>
               <button
                 className="flex h-10 w-10 items-center justify-center rounded"
                 type="button"
                 onClick={toggleMenu}
               >
-                <Image src="/icons/x.svg" alt="" height={34} width={34} />
+                <Image src="/icons/x.svg" alt="" height={20} width={20} />
               </button>
             </header>
-            <div className="flex flex-col gap-5 p-5">
-              <Link href={config.dextools} target="_blank">
-                <p className="font-heading text-3xl">CHART</p>
-              </Link>
+            <div className="relative flex flex-col gap-5 p-5">
+              <Button href={config.dextools} text="CHART"/>
               {sections?.map((section) => (
                 <button
-                  className="flex flex-row items-center justify-start"
+                  className="flex flex-row items-center justify-center"
                   type="button"
                   onClick={() => navigate(section.href)}
                   key={section.title}
                 >
-                  <h3 className="font-body text-2xl">{section.title}</h3>
+                  <h3 className="font-body text-2xl text-t2">{section.title}</h3>
                 </button>
               ))}
+              <div id="nav-menu-bg"/>
             </div>
           </div>
         </div>
