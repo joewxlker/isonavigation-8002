@@ -37,7 +37,7 @@ export const Tokenomics = ({ config }: { config: ProjectInfo }) => {
             </Section.Body>
             <div className="flex xl:flex-nowrap lg:flex-nowrap flex-wrap flex-row justify-between border-t-[1px] border-t-accent border-l-[1px] border-l-accent pb-20 p-5 gap-5">
                 {data.children.map(child => (
-                    <Card.Container>
+                    <Card.Container key={child.title}>
                         <Card.Header heading={child.title} icon="/icons/gg.svg" />
                         <div className="w-full flex-1 flex-col flex gap-5 px-3 py-2">
                             {child.children.map(child => (
